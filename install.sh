@@ -1,0 +1,11 @@
+stow alacritty
+stow git
+stow hypr
+stow jetbrains
+stow lazygit
+stow nvim
+stow vscode
+stow walker
+stow waybar
+stow xcompose
+stow zsh

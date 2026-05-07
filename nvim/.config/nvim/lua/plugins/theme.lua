@@ -1,0 +1,1 @@
+/home/danyel/.config/omarchy/current/theme/neovim.lua

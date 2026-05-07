@@ -9,4 +9,5 @@ stow vscode
 stow walker
 stow waybar
 stow xcompose
+stow xdg
 stow zsh

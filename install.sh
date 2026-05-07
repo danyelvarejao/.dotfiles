@@ -5,6 +5,7 @@ stow jetbrains
 stow lazygit
 stow nvim
 stow starship
+stow uwsm
 stow vscode
 stow walker
 stow waybar

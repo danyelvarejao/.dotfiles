@@ -1,5 +1,6 @@
 stow alacritty
 stow ashell
+stow btop
 stow git
 stow hypr
 stow jetbrains

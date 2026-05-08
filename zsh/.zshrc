@@ -1,3 +1,7 @@
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
 # All the default Omarchy aliases and functions
 if command -v mise &> /dev/null; then
   eval "$(mise activate zsh)"

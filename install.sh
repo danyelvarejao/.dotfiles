@@ -1,4 +1,5 @@
 rm -rf ~/.zshrc
+rm -rf ~/.zshenv
 rm -rf ~/.ideavimrc
 rm -rf ~/.vimrc
 rm -rf ~/.XCompose

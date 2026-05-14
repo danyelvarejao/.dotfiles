@@ -5,7 +5,7 @@ position = "Bottom"
 [modules]
 left = [ [ "appLauncher", "Workspaces", "MediaPlayer" ] ]
 center = [ "WindowTitle" ]
-right = [ "SystemInfo", [ "Tray", "Tempo", "Privacy", "Settings" ] ]
+right = [ "SystemInfo", [ "Tempo", "Privacy", "Settings", "Tray" ] ]
 
 [updates]
 check_cmd = "checkupdates; paru -Qua"

@@ -21,7 +21,9 @@
   height: 30px;
 }
 
-/* Right Side */
+.monaco-workbench .sidebar {
+  height: 100%;
+}
 
 /* Command Palette */
 .quick-input-titlebar {

@@ -36,7 +36,7 @@ alias dotfiles="cd ~/Dotfiles"
 alias proj="cd ~/Projects"
 
 alias lg="lazygit"
-alias cat="bat --theme auto:system --theme-dark default --theme-light GitHub"
+alias cat="bat"
 
 # Home and end not works
 bindkey "\e[H" beginning-of-line

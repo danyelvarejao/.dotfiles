@@ -12,10 +12,6 @@
   text-transform: lowercase !important;
 }
 
-.monaco-workbench .part > .composite.title > .title-actions {
-  display: none;
-}
-
 .composite-bar-container {
   justify-content: center;
 }
@@ -106,11 +102,6 @@
 
 .quick-input-count {
   right: 14px;
-}
-
-/* Editor Actions */
-.editor-actions {
-  display: none;
 }
 
 /* Status Bar */

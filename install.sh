@@ -1,3 +1,6 @@
+# Omarchy Defaults
+rm -rf ~/.local/share/omarchy/bin/omarchy-capture-screenrecording
+
 rm -rf ~/.zshrc
 rm -rf ~/.zshenv
 rm -rf ~/.ideavimrc
@@ -24,6 +27,7 @@ stow hypr
 stow jetbrains
 stow lazygit
 stow nvim
+stow scripts
 stow starship
 stow uwsm
 stow walker

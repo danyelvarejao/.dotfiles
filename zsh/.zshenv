@@ -8,3 +8,6 @@ export PATH="$PATH:$ANDROID_HOME/emulator"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 export CHROME_EXECUTABLE="/usr/bin/chromium"
+
+# Laravel
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"

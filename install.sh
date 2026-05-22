@@ -1,5 +1,6 @@
 # Omarchy Defaults
 rm -rf ~/.local/share/omarchy/bin/omarchy-capture-screenrecording
+rm -rf ~/.config/environment.d/fcitx.conf
 
 rm -rf ~/.zshrc
 rm -rf ~/.zshenv
@@ -22,6 +23,7 @@ rm -rf ~/.config/mimeapps.list
 stow alacritty
 stow ashell
 stow btop
+stow environment
 stow git
 stow hypr
 stow jetbrains
@@ -32,6 +34,4 @@ stow starship
 stow uwsm
 stow walker
 stow waybar
-stow xcompose
-stow xdg
 stow zsh

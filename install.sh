@@ -1,37 +1,64 @@
-# Omarchy Defaults
-rm -rf ~/.local/share/omarchy/bin/omarchy-capture-screenrecording
-rm -rf ~/.config/environment.d/fcitx.conf
+#!/usr/bin/env bash
 
-rm -rf ~/.zshrc
-rm -rf ~/.zshenv
-rm -rf ~/.ideavimrc
-rm -rf ~/.vimrc
-rm -rf ~/.XCompose
-rm -rf ~/.config/alacritty
-rm -rf ~/.config/ashell
-rm -rf ~/.config/btop/btop.conf
-rm -rf ~/.config/git
-rm -rf ~/.config/hypr
-rm -rf ~/.config/lazygit
-rm -rf ~/.config/nvim
-rm -rf ~/.config/starship.toml
-rm -rf ~/.config/uwsm
-rm -rf ~/.config/walker
-rm -rf ~/.config/waybar
-rm -rf ~/.config/mimeapps.list
+BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
+mkdir -p "$BACKUP_DIR"
 
-stow alacritty
-stow ashell
-stow btop
-stow environment
-stow git
-stow hypr
-stow jetbrains
-stow lazygit
-stow nvim
-stow scripts
-stow starship
-stow uwsm
-stow walker
-stow waybar
-stow zsh
+backup() {
+    local path="$1"
+
+    if [ -e "$path" ] || [ -L "$path" ]; then
+        echo "Backing up: $path"
+        mkdir -p "$BACKUP_DIR$(dirname "${path#$HOME}")"
+        mv "$path" "$BACKUP_DIR${path#$HOME}"
+    fi
+}
+
+# Omarchy defaults
+backup "$HOME/.local/share/omarchy/bin/omarchy-capture-screenrecording"
+backup "$HOME/.config/environment.d/fcitx.conf"
+
+# Dotfiles
+backup "$HOME/.zshrc"
+backup "$HOME/.zshenv"
+backup "$HOME/.ideavimrc"
+backup "$HOME/.vimrc"
+backup "$HOME/.XCompose"
+
+backup "$HOME/.config/alacritty"
+backup "$HOME/.config/ashell"
+backup "$HOME/.config/btop/btop.conf"
+backup "$HOME/.config/git"
+backup "$HOME/.config/hypr"
+backup "$HOME/.config/lazygit"
+backup "$HOME/.config/nvim"
+backup "$HOME/.config/starship.toml"
+backup "$HOME/.config/uwsm"
+backup "$HOME/.config/walker"
+backup "$HOME/.config/waybar"
+backup "$HOME/.config/mimeapps.list"
+
+echo "Backup salvo em: $BACKUP_DIR"
+
+# Stow
+for pkg in \
+    alacritty \
+    ashell \
+    btop \
+    environment \
+    git \
+    hypr \
+    jetbrains \
+    lazygit \
+    nvim \
+    scripts \
+    starship \
+    uwsm \
+    walker \
+    waybar \
+    zsh
+do
+    echo "Stowing $pkg..."
+    stow "$pkg"
+done
+
+echo "Concluído."

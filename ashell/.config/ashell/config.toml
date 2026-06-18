@@ -80,7 +80,7 @@ tooltip = "Toggle On-Screen Keyboard"
 [appearance]
 font_name = "JetbrainsMono Nerd Font"
 style = "Gradient"
-scale_factor = 1.1
+scale_factor = 1
 opacity = 0.8
 
 success_color = "#a6e3a1"

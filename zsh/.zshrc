@@ -29,7 +29,16 @@ if command -v fzf &> /dev/null; then
 fi
 
 source ~/.local/share/omarchy/default/bash/aliases
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# auto suggestions
+if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+# syntax highlight
+if [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 # Aliases
 alias dotfiles="cd ~/Dotfiles"

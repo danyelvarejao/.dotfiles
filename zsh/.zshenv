@@ -11,3 +11,7 @@ export CHROME_EXECUTABLE="/usr/bin/chromium"
 
 # Laravel
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+# Rust
+. "$HOME/.local/share/../bin/env"
+. "$HOME/.cargo/env"
